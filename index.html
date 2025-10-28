@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Business Name</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      max-width: 700px;
-      padding: 40px 20px;
-    }
-    h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-    p { font-size: 1.3rem; margin: 1rem 0; opacity: 0.9; }
-    .btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 14px 32px;
-      background: white;
-      color: #667eea;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .btn:hover { transform: scale(1.05); }
-    .contact { margin-top: 3rem; font-size: 1.1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Basin Farms</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Your Business Name</h1>
-    <p>Professional tagline or short description of what you do.</p>
-    <p>We help [your audience] achieve [their goal] with [your solution].</p>
-    <a href="mailto:you@yourbusiness.com" class="btn">Get in Touch</a>
-    <div class="contact">
-      <p>📞 (555) 123-4567</p>
-      <p>✉️ you@yourbusiness.com</p>
-      <p>📍 Your City, State</p>
-    </div>
-  </div>
+
+    <!-- Header Section -->
+    <header>
+        <img src="logo.png" alt="Sunset Basin Farms logo showing a hen with three chicks and a sunset" class="logo">
+        <h1>Sunset Basin Farms</h1>
+        <p class="tagline">Farm-Fresh Eggs & Country Living</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Our Eggs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h2>Welcome to Our Family Farm</h2>
+            <p>At <strong>Sunset Basin Farms</strong>, we raise happy hens under the wide Oregon sky. 
+            Our eggs are gathered daily, fresh from the nest to your table. 
+            We believe in keeping things simple, natural, and sustainable for our family and yours.</p>
+            <img src="farm-photo.jpg" alt="A tractor and hen coop at Sunset Basin Farms" class="main-photo">
+        </section>
+
+        <section class="services">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Farm-fresh ungraded eggs</li>
+                <li>Local pickup and delivery</li>
+                <li>Family-friendly farm tours</li>
+                <li>Rustic handmade egg cartons and labels</li>
+            </ul>
+        </section>
+
+        <section class="links">
+            <h2>Explore More</h2>
+            <p>Check out our other pages to learn more:</p>
+            <ul>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="products.html">View Our Eggs</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sunset Basin Farms | All Rights Reserved</p>
+        <p>Email us at <a href="mailto:info@sunsetbasinfarms.com">info@sunsetbasinfarms.com</a></p>
+    </footer>
+
 </body>
 </html>
