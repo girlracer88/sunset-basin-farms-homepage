@@ -1,13 +1,6 @@
-/* ===== SUNSET BASIN FARMS - ANTIQUE FARM THEME ===== */
-:root {
-  --parchment: #f9f5e8;
-  --sepia: #8b6f47;
-  --gold: #b8860b;
-  --charcoal: #2d2d2d;
-  --cream: #f5f0e1;
-}
+/* ===== Sunset Basin Farms - Simple One-Color Theme ===== */
 
-/* Reset */
+/* Reset defaults */
 * {
   margin: 0;
   padding: 0;
@@ -16,147 +9,126 @@
 
 /* Body */
 body {
-  font-family: "Crimson Text", serif;
-  background-color: var(--parchment);
-  color: var(--charcoal);
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
-  text-align: center;
-  padding-bottom: 60px;
 }
 
 /* Header */
 header {
-  background-color: var(--cream);
-  border-bottom: 3px double var(--sepia);
-  padding: 25px 10px;
+  background-color: #4a6b46; /* rustic green */
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
 }
 
 header img {
-  max-width: 220px;
+  max-width: 200px;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 8px;
 }
 
 h1 {
-  font-family: "Cinzel", serif;
-  color: var(--sepia);
+  font-family: "Georgia", serif;
   font-size: 2.5rem;
   margin-bottom: 5px;
 }
 
 .tagline {
   font-style: italic;
-  color: var(--gold);
   font-size: 1.2rem;
 }
 
 /* Navigation */
 nav {
-  background-color: var(--charcoal);
+  background-color: #3e5d3b;
+  text-align: center;
   padding: 10px 0;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav a {
-  color: var(--cream);
   text-decoration: none;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 5px;
-  transition: 0.3s;
+  color: white;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: var(--gold);
-  color: var(--charcoal);
+  background-color: white;
+  color: #3e5d3b;
 }
 
 /* Main Content */
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 section {
-  background-color: var(--cream);
-  border: 1px solid var(--gold);
-  border-radius: 10px;
+  background-color: white;
   padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-  font-family: "Cinzel", serif;
-  color: var(--sepia);
+  font-family: "Georgia", serif;
+  color: #4a6b46;
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  text-align: center;
 }
 
 /* Services List */
 ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 30px;
+  text-align: left;
 }
 
 ul li {
-  font-size: 1.1rem;
   margin-bottom: 8px;
-  position: relative;
-  padding-left: 25px;
-}
-
-ul li::before {
-  content: "🌾";
-  position: absolute;
-  left: 0;
-  color: var(--gold);
 }
 
 /* Links Section */
+.links {
+  text-align: center;
+}
+
 .links a {
-  color: var(--sepia);
+  color: #4a6b46;
   text-decoration: none;
-  border-bottom: 1px dotted var(--gold);
+  font-weight: bold;
 }
 
 .links a:hover {
-  color: var(--gold);
-  border-bottom: 1px solid var(--gold);
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  background-color: var(--charcoal);
-  color: var(--cream);
+  background-color: #4a6b46;
+  color: white;
+  text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive (mobile-friendly) */
+@media (max-width: 600px) {
   h1 { font-size: 2rem; }
-  h2 { font-size: 1.4rem; }
-  nav ul { flex-direction: column; gap: 10px; }
+  nav li { display: block; margin: 10px 0; }
 }
