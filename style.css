@@ -1,10 +1,11 @@
+/* ===== Sunset Basin Farms - Project 2 Styles ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #f9f9f9;
@@ -12,9 +13,8 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
-  background-color: #4a6b46; /* rustic green */
+  background-color: #4a6b46;
   color: white;
   text-align: center;
   padding: 30px 15px;
@@ -23,51 +23,51 @@ header {
 header img {
   max-width: 200px;
   height: auto;
-  margin-bottom: 10px;
 }
 
 h1 {
-  font-family: "Georgia", serif;
-  font-size: 2.5rem;
+  font-family: Georgia, serif;
+  font-size: 2.3rem;
   margin-bottom: 5px;
 }
 
 .tagline {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
   background-color: #3e5d3b;
-  text-align: center;
-  padding: 10px 0;
 }
 
 nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav li {
-  display: inline-block;
   margin: 0 15px;
 }
 
 nav a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  padding: 10px 15px;
+  display: inline-block;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   background-color: white;
   color: #3e5d3b;
+  border-radius: 4px;
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 main {
   max-width: 900px;
   margin: 30px auto;
@@ -83,43 +83,73 @@ section {
 }
 
 h2 {
-  font-family: "Georgia", serif;
   color: #4a6b46;
   margin-bottom: 15px;
   text-align: center;
 }
 
-/* Services List */
 ul {
   list-style: disc;
   padding-left: 30px;
-  text-align: left;
 }
 
-ul li {
-  margin-bottom: 8px;
-}
-
-/* Links Section */
-.links {
-  text-align: center;
-}
-
-.links a {
-  color: #4a6b46;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
   background-color: #4a6b46;
   color: white;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+input, textarea, button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4a6b46;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a5238;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 8px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
