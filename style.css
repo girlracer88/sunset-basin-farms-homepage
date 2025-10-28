@@ -1,208 +1,162 @@
-/* ===== ANTIQUE FARM THEME ===== */
+/* ===== SUNSET BASIN FARMS - ANTIQUE FARM THEME ===== */
 :root {
-    --parchment: #f9f5e8;
-    --sepia: #8b6f47;
-    --gold: #b8860b;
-    --charcoal: #2d2d2d;
-    --cream: #f5f0e1;
-    --border-gold: #d4af37;
+  --parchment: #f9f5e8;
+  --sepia: #8b6f47;
+  --gold: #b8860b;
+  --charcoal: #2d2d2d;
+  --cream: #f5f0e1;
 }
 
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: 'Crimson Text', serif;
-    background: var(--parchment);
-    color: var(--charcoal);
-    line-height: 1.7;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 80px;
-}
-
-/* Subtle antique paper texture */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.08"/></svg>') repeat;
-    pointer-events: none;
-    z-index: -1;
+  font-family: "Crimson Text", serif;
+  background-color: var(--parchment);
+  color: var(--charcoal);
+  line-height: 1.6;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 /* Header */
 header {
-    text-align: center;
-    padding: 40px 20px 20px;
-    background: linear-gradient(to bottom, rgba(249,245,232,1), rgba(245,240,225,0.9));
-    border-bottom: 3px double var(--sepia);
+  background-color: var(--cream);
+  border-bottom: 3px double var(--sepia);
+  padding: 25px 10px;
 }
 
-.logo {
-    max-width: 280px;
-    height: auto;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-    border-radius: 12px;
+header img {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
 h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
-    color: var(--sepia);
-    margin-bottom: 8px;
-    letter-spacing: 1.5px;
+  font-family: "Cinzel", serif;
+  color: var(--sepia);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 }
 
 .tagline {
-    font-style: italic;
-    color: var(--gold);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.2rem;
 }
 
 /* Navigation */
 nav {
-    background: var(--charcoal);
-    padding: 12px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: var(--charcoal);
+  padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 nav a {
-    color: var(--cream);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-nav a:hover,
- {
-    background: var(--gold);
-    color: var(--charcoal);
-}
-
-nav a.active {
-    background: var(--gold);
-    color: var(--charcoal);
+nav a:hover {
+  background-color: var(--gold);
+  color: var(--charcoal);
 }
 
 /* Main Content */
 main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 15px;
 }
 
 section {
-    margin-bottom: 40px;
-    background: var(--cream);
-    padding: 30px;
-    border: 1px solid var(--border-gold);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  background-color: var(--cream);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    font-family: 'Cinzel', serif;
-    color: var(--sepia);
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-align: center;
-    position: relative;
+  font-family: "Cinzel", serif;
+  color: var(--sepia);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 10px auto;
-}
-
-.main-photo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border: 3px solid var(--border-gold);
-}
-
+/* Services List */
 ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul li {
-    padding: 8px 0;
-    position: relative;
-    padding-left: 25px;
-    font-size: 1.1rem;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
 }
 
 ul li::before {
-    content: "🌾";
-    position: absolute;
-    left: 0;
-    color: var(--gold);
+  content: "🌾";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
 }
 
+/* Links Section */
 .links a {
-    color: var(--sepia);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px dotted var(--gold);
+  color: var(--sepia);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold);
 }
 
 .links a:hover {
-    color: var(--gold);
-    border-bottom: 1px solid var(--gold);
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--charcoal);
-    color: var(--cream);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.95rem;
+  background-color: var(--charcoal);
+  color: var(--cream);
+  padding: 20px;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {
-    color: var(--gold);
-    text-decoration: none;
+  color: var(--gold);
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.7rem; }
-    nav ul { flex-direction: column; align-items: center; }
-    .logo { max-width: 220px; }
-    section { padding: 20px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  nav ul { flex-direction: column; gap: 10px; }
 }
