@@ -1,2 +1,2 @@
 # sunset-basin-farms-homepage
-A simple beginner level HTML and CSS homepage for my CS104 Assignment
+A small family farm providing quality eggs by healthy, happy hens.
