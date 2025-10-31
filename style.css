@@ -162,3 +162,6 @@ button:hover {
 #prev, #next { position: absolute; top: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 1rem; cursor: pointer; }
 #prev { left: 10px; } #next { right: 10px; }
 @media (max-width: 768px) { .modal-content { max-width: 95%; } }
+.error { color: red; font-size: 0.9em; display: block; }
+.error.valid { color: green; }
+input:focus, textarea:focus { outline: 2px solid #007bff; }
