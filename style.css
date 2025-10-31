@@ -153,3 +153,12 @@ button:hover {
     font-size: 1.8rem;
   }
 }
+.services-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.gallery-thumbs img { width: 100%; height: auto; cursor: pointer; border: 2px solid transparent; transition: border 0.3s; }
+.gallery-thumbs img:focus { border: 2px solid #007bff; outline: 3px solid #007bff; } /* Visible focus for keyboard */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; }
+.modal-content { position: relative; max-width: 80%; margin: 5% auto; text-align: center; }
+.close:focus { outline: 3px solid #fff; }
+#prev, #next { position: absolute; top: 50%; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; padding: 1rem; cursor: pointer; }
+#prev { left: 10px; } #next { right: 10px; }
+@media (max-width: 768px) { .modal-content { max-width: 95%; } }
