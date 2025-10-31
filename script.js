@@ -35,6 +35,109 @@ if (loadBtn) {
     loadBtn.disabled = true;
   });
 }
+// DOM Manipulation: Select elements and add event listeners
+document.addEventListener('DOMContentLoaded', function() {  // Wait for DOM load
+    const thumbs = document.querySelectorAll('#thumbnails img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close-modal');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let currentIndex = 0;
+    const images = Array.from(thumbs).map(img => ({ thumb: img.src, full: img.dataset.full, alt: img.alt }));
+
+    // Function to open modal (DOM update)
+    function openModal(index) {
+        currentIndex = index;
+        modalImg.src = images[index].full;
+        modalImg.alt = images[index].alt;  // Dynamic alt for accessibility
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        modalImg.style.display = 'block';
+        document.body.style.overflow = 'hidden';  // Prevent scroll
+        modalImg.focus();  // Focus management
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Next/Prev navigation
+    function changeImage(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        openModal(currentIndex);
+    }
+
+    // Event listeners (device-independent: click + keydown)
+    thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => openModal(index));
+        thumb.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(index); } });
+    });
+    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); closeModal(); } });
+    prevBtn.addEventListener('click', () => changeImage(-1));
+    nextBtn.addEventListener('click', () => changeImage(1));
+    prevBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter') changeImage(-1); });
+    nextBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter') changeImage(1); });
+
+    // Close on Escape key or outside click
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.style.display === 'block') closeModal(); });
+});// DOM Manipulation: Select elements and add event listeners
+document.addEventListener('DOMContentLoaded', function() {  // Wait for DOM load
+    const thumbs = document.querySelectorAll('#thumbnails img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close-modal');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let currentIndex = 0;
+    const images = Array.from(thumbs).map(img => ({ thumb: img.src, full: img.dataset.full, alt: img.alt }));
+
+    // Function to open modal (DOM update)
+    function openModal(index) {
+        currentIndex = index;
+        modalImg.src = images[index].full;
+        modalImg.alt = images[index].alt;  // Dynamic alt for accessibility
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        modalImg.style.display = 'block';
+        document.body.style.overflow = 'hidden';  // Prevent scroll
+        modalImg.focus();  // Focus management
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Next/Prev navigation
+    function changeImage(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        openModal(currentIndex);
+    }
+
+    // Event listeners (device-independent: click + keydown)
+    thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => openModal(index));
+        thumb.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(index); } });
+    });
+    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); closeModal(); } });
+    prevBtn.addEventListener('click', () => changeImage(-1));
+    nextBtn.addEventListener('click', () => changeImage(1));
+    prevBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter') changeImage(-1); });
+    nextBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter') changeImage(1); });
+
+    // Close on Escape key or outside click
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.style.display === 'block') closeModal(); });
+});
 
 // 3️⃣ Form Validation
 const form = document.getElementById('farmForm');
