@@ -8,6 +8,25 @@
 </head>
   <script src="script.js"></script>
 <body>
+  <section id="gallery" class="services-gallery" role="region" aria-label="Services Image Gallery">
+    <h2>Our Services Visualized</h2>
+    <div id="thumbnails" class="gallery-thumbs">
+        <!-- Thumbnails will be populated via JS or static; use real images from your site -->
+        <img src="images/consulting-thumb.jpg" alt="Consulting session in progress" data-full="images/consulting-full.jpg" tabindex="0">
+        <img src="images/training-thumb.jpg" alt="Team training workshop" data-full="images/training-full.jpg" tabindex="0">
+        <img src="images/support-thumb.jpg" alt="Customer support team" data-full="images/support-full.jpg" tabindex="0">
+    </div>
+    <!-- Modal (hidden by default) -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <span id="close-modal" class="close" tabindex="0" aria-label="Close gallery">&times;</span>
+            <h3 id="modal-title">Service Image</h3>
+            <img id="modal-img" src="" alt="" style="display:none;"> <!-- Alt updated dynamically -->
+            <button id="prev" aria-label="Previous image">‹</button>
+            <button id="next" aria-label="Next image">›</button>
+        </div>
+    </div>
+</section>
   <header>
     <h1>Our Farm Services</h1>
   </header>
